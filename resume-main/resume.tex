@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letter]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=10cm,marginparwidth=8.25cm,marginparsep=.75cm,top=0.5cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[none]{hyphenat}
+\usepackage[document]{ragged2e}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{LightGreen}{HTML}{90EE90}
+\definecolor{AccentGreen}{HTML}{339966}
+\definecolor{AcePurple}{HTML}{800080}
+\definecolor{DarkerPurple}{HTML}{5b005b}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{SomeBlue}{HTML}{4286f4}
+% \colorlet{heading}{AcePurple}%Sepia}
+% \colorlet{heading}{LightGreen}
+\colorlet{heading}{AcePurple}
+% \colorlet{accent}{DarkerPurple}%AccentGreen}
+% \colorlet{accent}{AccentGreen}
+\colorlet{accent}{DarkerPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Devin Jiang}
+\tagline{Seeking a Summer or Fall 2023 Software Engineering \\ Co-op/Intership}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{devinjiang7@gmail.com}\\\smallskip
+  \github{github.com/dj6207}\\\smallskip
+  % fix my github bruh
+  % \homepage{}\\\smallskip
+  % \phone{(917) 530-8909}\\\smallskip
+  \linkedin{in/jiangdevin}\\\smallskip
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\marginpar{\makesidebarheader\input{sidebar.tex}}
+    \vspace*{-1\baselineskip}
+\makecvheader
+\end{fullwidth}
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection{Projects}
+
+\project{Note Taking Program}{https://github.com/dj6207/notes}
+% add a read me for this project
+\begin{itemize}
+  \item Wrote a Python program to record and send audio to a server, then transcribes the audio into text
+  \item Utilized Facebook AI's Wav2vec2 automatic speech recognitioin model to transcribe audio to text
+  \item Dockerized the Python program for easy deployment on various systems
+% \item Wrote a Python scraper to check the official dashboard on an interval and update a SQLite database with the numbers from the official dashboard, then expose the saved data with a JSON API
+% \item Consumed data from the scraper in a React app that provides all the information from the official dashboard as well as changes over a user-selected time period and graphs of all historical data
+% \item Used by roughly 10\% of the student body within 24 hours of launch
+\end{itemize}
+\textit{\textbf{Tools:} Python, Docker}
+
+\divider
+
+\normalproject{Home Server}
+\begin{itemize}
+  \item Deployed a Network Attached Storage server using Unraid software
+  \item Hosted virtual machines and docker container applications for various users  
+  \item Initialized a VPN tunnel to the server using WireGuard for easy access
+\end{itemize}
+\textit{\textbf{Tools:} Unraid, WireGuard, Docker}
+
+\divider
+
+\project{Weather App}{https://github.com/dj6207/Weather}
+\begin{itemize}
+  \item Implemented a JavaScript website to display the current weather in various cities
+  \item Utilized the OpenWeather API to obtain weather statistics 
+\end{itemize}
+\textit{\textbf{Tools:} JavaScript, HTML/CSS}
+
+\divider
+
+\project{Rush Hour Game}{https://github.com/dj6207/RushHour}
+\begin{itemize}
+% \item TALK more about experiences and projcet
+  \item Implemented Rush Hour Gaming using the Model View Controller framework in Java
+  \item Utilized the JavaFX library to create a user interface for the game
+  \item Used Breadth First Search algorithm to find the shortest solution
+\end{itemize}
+\textit{\textbf{Tools:} Java, JavaFX}
+
+\smallskip
+
+\cvsection{Activities}
+
+\normalactivity{Computer Science House}{August 2021 - Present | Active Member}
+\begin{itemize}
+  \item Living and learning community focused on learning new skills and concepts
+  \item Collaborative environment where members are highly encouraged to work on personal projects
+\end{itemize}
+
+% \cvevent{Computer Science House}{Active Member}{August 2021 - Present}{}
+% \begin{itemize}
+%     \item Living and learning community focused on learning new skills and concepts
+%     \item Collaborative environment where members are highly encouraged to work on personal projects
+% \end{itemize}
+
+\divider
+
+\normalactivity{Society of Asian Scientists and Engineers}{August 2021 - Present | Active Member}
+\begin{itemize}
+    \item An organization based around mentorship for career development
+\end{itemize}
+
+% \cvevent{Society of Asian Scientists and Engineers}{Active Member}{August 2021 - Present}{}
+% \begin{itemize}
+%     \item An organization based around mentorship for career development
+% \end{itemize}
+
+\clearpage
+
+\end{document}
