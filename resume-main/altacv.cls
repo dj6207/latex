@@ -103,6 +103,8 @@
     {\fontsize{36}{40}\bfseries\MakeUppercase{\@name}\par}
     \vspace{4.7px}
     {\large\bfseries\@tagline\par}
+    \vspace{4.7px}
+    {\footnotesize\bfseries\@personalinfo\par}
     \ifdef{\@photodiameter}{%
     \end{minipage}\hfill%
     \begin{minipage}{\@photodiameter}
@@ -122,9 +124,9 @@
   {\color{heading}\rule{\linewidth}{2pt}\par}\smallskip
 }
 
-\newcommand{\makesidebarheader}{
-    {\footnotesize\bfseries\@personalinfo\par}
-}
+% \newcommand{\makesidebarheader}{
+%     {\footnotesize\bfseries\@personalinfo\par}
+% }
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
@@ -156,6 +158,16 @@
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
   \medskip
 }
+
+\newcommand{\cvexperience}[3]{%
+  \smallskip
+  {\large\color{emphasis}#1\par}
+  \smallskip
+  \ifstrequal{#2}{}{}{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar \hspace{0.5em}#2}%
+  \ifstrequal{#3}{}{}{\makebox[0.5\linewidth][l]{\color{accent}\faMapMarker\hspace{0.5em}#3}}\par}
+  \medskip
+}
+
 \newcommand{\cvsubevent}[3]{%
   \smallskip
   \textbf{\color{accent}#1}\par
@@ -174,7 +186,8 @@
 }
 
 \newcommand{\cvtag}[1]{%
-    \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=.5ex,inner ysep =.425ex,text height=1.5ex,text depth=.25ex]{\small{#1}};
+    \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+    % \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=.5ex,inner ysep =.425ex,text height=1.5ex,text depth=.25ex]{\small{#1}};
     % \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1.5ex,inner ysep =1.425ex,text height=1.5ex,text depth=.25ex]{\small{#1}};
 }
 

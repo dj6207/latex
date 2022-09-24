@@ -36,7 +36,8 @@
 
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=10cm,marginparwidth=8.25cm,marginparsep=.75cm,top=0.5cm,bottom=1cm}
+% \geometry{left=1cm,right=10cm,marginparwidth=8.25cm,marginparsep=.75cm,top=0.5cm,bottom=1cm}
+\geometry{left=1cm,right=8.8cm,marginparwidth=6.8cm,marginparsep=1cm,top=1cm,bottom=1cm}
 
 % Change the font if you want to.
 
@@ -74,48 +75,67 @@
 
 \begin{document}
 \name{Devin Jiang}
-\tagline{Seeking a Summer or Fall 2023 Software Engineering \\ Co-op/Intership}
+\tagline{Seeking a Summer or Fall 2023 Software Engineering Co-op/Intership}
 \personalinfo{%
   % Not all of these are required!
+  % \medskip
   % You can add your own with \printinfo{symbol}{detail}
-  \email{devinjiang7@gmail.com}\\\smallskip
-  \github{github.com/dj6207}\\\smallskip
+  \email{devinjiang7@gmail.com}
+  % \email{devinjiang7@gmail.com}\\\smallskip
+  \github{github.com/dj6207}
+  % \github{github.com/dj6207}\\\smallskip
   % fix my github bruh
   % \homepage{}\\\smallskip
   % \phone{(917) 530-8909}\\\smallskip
-  \linkedin{in/jiangdevin}\\\smallskip
+  \linkedin{in/jiangdevin}
+  % \linkedin{in/jiangdevin}\\\smallskip
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
 %   \orcid{orcid.org/0000-0000-0000-0000}
 }
 
 %% Make the header extend all the way to the right, if you want.
 \begin{fullwidth}
-\marginpar{\makesidebarheader\input{sidebar.tex}}
-    \vspace*{-1\baselineskip}
+% \marginpar{\makesidebarheader\input{sidebar.tex}}
+%     \vspace*{-1\baselineskip}
 \makecvheader
 \end{fullwidth}
+
+% \cvsection[sidebar]{Experience}
+
 %% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 
-\cvsection{Projects}
+\cvsection[sidebar]{Projects}
 
-\project{Note Taking Program}{https://github.com/dj6207/notes}
-% add a read me for this project
+\cvevent{Weathering With You}{\githubsymbol\hspace{1ex}\href{https://github.com/dj6207/Weather}{https://github.com/dj6207/Weather}}{Sept 2022 -- Present}{}
 \begin{itemize}
-  \item Wrote a Python program to record and send audio to a server, then transcribes the audio into text
-  \item Utilized Facebook AI's Wav2vec2 automatic speech recognitioin model to transcribe audio to text
-  \item Dockerized the Python program for easy deployment on various systems
-% \item Wrote a Python scraper to check the official dashboard on an interval and update a SQLite database with the numbers from the official dashboard, then expose the saved data with a JSON API
-% \item Consumed data from the scraper in a React app that provides all the information from the official dashboard as well as changes over a user-selected time period and graphs of all historical data
-% \item Used by roughly 10\% of the student body within 24 hours of launch
+  \item Implemented a JavaScript website to display the current weather based on the city inputted in the search bar
+  \item Utilized the OpenWeather API to obtain weather statistics in various cities
 \end{itemize}
-\textit{\textbf{Tools:} Python, Docker}
+\textit{\textbf{Tools:} JavaScript, HTML/CSS}
+
+% \project{Note Taking Program}{https://github.com/dj6207/notes}
+% % add a read me for this project
+% \begin{itemize}
+%   \item Wrote a Python program to record and send audio to a server, then transcribes the audio into text
+%   \item Utilized Facebook AI's Wav2vec2 automatic speech recognitioin model to transcribe audio to text
+%   \item Dockerized the Python program for easy deployment on various systems
+% \end{itemize}
+% \textit{\textbf{Tools:} Python, Docker}
 
 \divider
 
-\normalproject{Home Server}
+% \project{Home Server}{https://github.com/dj6207/HomeServer}
+% \begin{itemize}
+%   \item Deployed a Network Attached Storage server using Unraid software
+%   \item Hosted virtual machines and docker container applications for various users  
+%   \item Initialized a VPN tunnel to the server using WireGuard for easy access
+% \end{itemize}
+% \textit{\textbf{Tools:} Unraid, WireGuard, Docker}
+
+\cvevent{Home Server}{\githubsymbol\hspace{1ex}\href{https://github.com/dj6207/HomeServer}{https://github.com/dj6207/HomeServer}}{Nov 2021 -- Present}{}
 \begin{itemize}
   \item Deployed a Network Attached Storage server using Unraid software
   \item Hosted virtual machines and docker container applications for various users  
@@ -125,50 +145,98 @@
 
 \divider
 
-\project{Weather App}{https://github.com/dj6207/Weather}
-\begin{itemize}
-  \item Implemented a JavaScript website to display the current weather in various cities
-  \item Utilized the OpenWeather API to obtain weather statistics 
-\end{itemize}
-\textit{\textbf{Tools:} JavaScript, HTML/CSS}
+% \project{Weather App}{https://github.com/dj6207/Weather}
+% \begin{itemize}
+%   \item Implemented a JavaScript website to display the current weather in various cities
+%   \item Utilized the OpenWeather API to obtain weather statistics 
+% \end{itemize}
+% \textit{\textbf{Tools:} JavaScript, HTML/CSS}
 
-\divider
-
-\project{Rush Hour Game}{https://github.com/dj6207/RushHour}
+\cvevent{Notes With AI}{\githubsymbol\hspace{1ex}\href{https://github.com/dj6207/notes}{https://github.com/dj6207/notes}}{Jan 2022 -- June 2022}{}
 \begin{itemize}
-% \item TALK more about experiences and projcet
-  \item Implemented Rush Hour Gaming using the Model View Controller framework in Java
-  \item Utilized the JavaFX library to create a user interface for the game
-  \item Used Breadth First Search algorithm to find the shortest solution
+  \item Wrote a Python program to record and send audio to a server, then transcribes the audio into text
+  \item Utilized Facebook AI's Wav2vec2 automatic speech recognitioin model to transcribe audio to text
+  \item Dockerized the Python program for easy deployment on various systems
 \end{itemize}
-\textit{\textbf{Tools:} Java, JavaFX}
+\textit{\textbf{Tools:} Python, Docker}
+
+% \divider
+
+% \project{Rush Hour Game}{https://github.com/dj6207/RushHour}
+% \begin{itemize}
+% % \item TALK more about experiences and projcet
+%   \item Implemented Rush Hour Gaming using the Model View Controller framework in Java
+%   \item Utilized the JavaFX library to create a user interface for the game
+%   \item Used Breadth First Search algorithm to find the shortest solution
+% \end{itemize}
+% \textit{\textbf{Tools:} Java, JavaFX}
 
 \smallskip
 
-\cvsection{Activities}
+% \cvsection{Activities}
 
-\normalactivity{Computer Science House}{August 2021 - Present | Active Member}
+% \normalactivity{Computer Science House}{August 2021 - Present | Active Member}
+% \begin{itemize}
+%   \item Living and learning community focused on learning new skills and concepts
+%   \item Collaborative environment where members are highly encouraged to work on personal projects
+% \end{itemize}
+
+% \divider
+
+% \normalactivity{Society of Asian Scientists and Engineers}{August 2021 - Present | Active Member}
+% \begin{itemize}
+%     \item An organization based around mentorship for career development
+% \end{itemize}
+
+\cvsection{Experience}
+
+\cvexperience{NYC Health + Hospitals / Gouverneur | Intern}{July 2022 -- August 2022}{Manhattan, NY}
 \begin{itemize}
-  \item Living and learning community focused on learning new skills and concepts
-  \item Collaborative environment where members are highly encouraged to work on personal projects
+  \item Assisted the IT department with maintaining and repairing hospital systems and machines
+  \item Worked with Human Resource staff to prepare for the Years of Service event with 60+ attendees
+  \item Helped Human Resource staff with setting up a recuitment event with 20 interviewees
+  \item Handled paper work using the OnBase software for various departments 
 \end{itemize}
 
-% \cvevent{Computer Science House}{Active Member}{August 2021 - Present}{}
+% \cvevent{NYC Health + Hospitals / Gouverneur}{Intern}{July 2022 -- August 2022}{Manhattan, NY}
 % \begin{itemize}
-%     \item Living and learning community focused on learning new skills and concepts
-%     \item Collaborative environment where members are highly encouraged to work on personal projects
+%   \item Assisted the IT department with maintaining and repairing hospital systems and machines
+%   \item Worked with Human Resource staff to prepare for the Years of Service event with 60+ attendees
+%   \item Helped Human Resource staff with setting up a recuitment event with 20 interviewees
+%   \item Handled paper work using the OnBase software for various departments 
+%   % \item maybe reword some of this
+%   % \item be more specific with what hospital systems you are using
 % \end{itemize}
 
 \divider
 
-\normalactivity{Society of Asian Scientists and Engineers}{August 2021 - Present | Active Member}
+\cvexperience{Whole Foods Market | In Store Shopper}{June 2022 -- August 2022}{Manhattan, NY}
 \begin{itemize}
-    \item An organization based around mentorship for career development
+  \item Assisted customers and team members with grocery shopping 
+  \item Worked with Whole Foods team members to complete online orders
 \end{itemize}
 
-% \cvevent{Society of Asian Scientists and Engineers}{Active Member}{August 2021 - Present}{}
+\divider
+
+\cvexperience{Hong Kong Dragon Boat Festival | Dock Staff}{July 2021 -- August 2021}{Queens, NY}
+\begin{itemize}
+  \item Worked with event coordinators in organizing the Annual Dragon Boat Festival
+  \item Assisted 14 sponsored teams in preparation for the race
+  \item Coordinated student volunteers in various tasks during race day
+\end{itemize}
+
+% \cvevent{Hong Kong Dragon Boat Festival}{Dock Staff}{July 2021 -- August 2021}{Queens, NY}
 % \begin{itemize}
-%     \item An organization based around mentorship for career development
+%   \item Worked with event coordinators in organizing the Annual Dragon Boat Festival
+%   \item Assisted 14 sponsored teams in preparation for the race
+%   \item Coordinated student volunteers in various tasks during race day
+%   % \item Talk about communitating with customers
+% \end{itemize}
+
+% \cvevent{Whole Foods Market}{In Store Shopper}{June 2022 -- August 2022}{Manhattan, NY}
+% \begin{itemize}
+%   \item Assisted customers and team members with grocery shopping 
+%   \item Worked with Whole Foods team members to complete online orders
 % \end{itemize}
 
 \clearpage
