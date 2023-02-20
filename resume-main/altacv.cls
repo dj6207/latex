@@ -152,10 +152,27 @@
   \smallskip
   {\large\color{emphasis}#1\par}
   \smallskip
-  \textbf{\color{accent}#2}\par
+  \small\textbf{\color{accent}#2}\par
   \smallskip
   \ifstrequal{#3}{}{}{\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
+  \medskip
+}
+
+\newcommand{\cvproject}[3]{
+  \smallskip
+  {\large\color{emphasis}#1\par}
+  \smallskip
+  \ifstrequal{#2}{}{}{\small\makebox[0.5\linewidth][l]{\color{accent}\githubsymbol\hspace{0.5em}#2}
+  \ifstrequal{#3}{}{}{\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\hspace{0.5em}#3}}\par}
+  \medskip
+}
+
+\newcommand{\activity}[2]{
+  \smallskip
+  {\large\color{emphasis}#1\par}
+  \smallskip
+  \ifstrequal{#2}{}{}{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\hspace{0.5em}#2}\par}
   \medskip
 }
 
@@ -288,8 +305,8 @@
 }
 
 
-\newcommand{\project}[2]{\cvevent{#1}{\href{#2}{\githubsymbol\hspace{1ex}#2}}{}{}}
-\newcommand{\noghproject}[2]{\cvevent{#1}{\href{#2}{\homepagesymbol\hspace{1ex}#2}}{}{}}
-\newcommand{\normalproject}[1]{\nothing{#1}{}{}}
+% \newcommand{\project}[2]{\cvevent{#1}{\href{#2}{\githubsymbol\hspace{1ex}#2}}{}{}}
+% \newcommand{\noghproject}[2]{\cvevent{#1}{\href{#2}{\homepagesymbol\hspace{1ex}#2}}{}{}}
+% \newcommand{\normalproject}[1]{\nothing{#1}{}{}}
 \newcommand{\normalactivity}[2]{\cvevent{#1}{\href{#2}{\faCalendar\hspace{0.5em}#2}}{}{}}
 % \newcommand{\normalexperience}[2]{\cvevent{#1}{\href{#2}{\faCalendar\hspace{0.5em} \faMapMarker\hspace{0.5em}#2}}{}{}}
