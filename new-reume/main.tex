@@ -1,0 +1,226 @@
+%-------------------------
+% Resume in Latex
+% Author : Gennadii Chursov
+% Based off of: https://github.com/sb2nov/resume and https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeListItems}[2]{
+    \small{\textbf{#1}: #2}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Devin Jiang} \\ \vspace{1pt}
+    \textbf{\large Seeking a Summer and Fall 2024 Software Engineering Co-op/Internship} \\
+    917-530-8909 $|$ \href{mailto:devinjiang@gmail.com}{\underline{devinjiang@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/jiangdevin}{\underline{in/jiangdevin/}} $|$
+    \href{https://github.com/dj6207}{\underline{github.com/dj6207}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rochester Institute of Technology}{Rochester, NY}
+      {Bachelor of Science in Computer Engineering; GPA: 3.7}{Expected Graduation: May 2026}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Baxter International}{Aug. 2023 - Jan. 2024}
+      {Test Engineering Intern}{Skaneateles, NY}
+    \resumeItemListStart
+        \resumeItem {Optimized automation scripts, enhancing reliability and performance, ensuring smoother operational workflows.}
+        \resumeItem {Implemented Python automation tools to perform data analysis, effectively organizing data in Excel.}
+        \resumeItem {Refactored and improved the existing Python code for the Dorna2 robotic arm, significantly improving reliability.}
+        \resumeItem {Developed a desktop application for inventory tracking, ensuring efficient management of test fixtures and devices.}
+    \resumeItemListEnd
+    \resumeListItems{Tools}{Python, Rust, Tauri, TypeScript, React, Material UI, Linux, Raspberry Pi}
+
+    \resumeSubheading
+      {Konfoong Materials International}{Jul. 2023 - Aug. 2023}
+      {Software Engineering Intern}{Yu Yao, China}
+    \resumeItemListStart
+        \resumeItem {Collaborated effectively with another intern to design and develop a MVP for a home automation software.}
+        \resumeItem {Spearheaded the frontend development of the software utilizing React and Material UI for rapid development.}
+        \resumeItem {Successfully containerized and deployed the MVP on Alibaba Cloud IoT platform.}
+        \resumeItem {Composed a Software Architecture documentation, providing a framework for future scalability and maintenance.}
+    \resumeItemListEnd
+    \resumeListItems{Tools}{React, Redux Toolkit, TypeScript, Material UI, Docker, Alibaba Cloud}
+
+
+    \resumeSubheading
+      {Soleras Advanced Coatings}{Jun. 2023 - Aug. 2023}
+      {Software Engineering Intern}{Deinze, Belgium}
+    \resumeItemListStart
+        \resumeItem {Transformed a manual Python analysis script into an automated service, increasing processing efficiency and reducing human error.}
+        \resumeItem {Implemented a communication link utilizing the GRPC protocol to ensure seamless transfer of analysis data between the Python service and the C\# backend.}
+        \resumeItem {Enhanced and updated the Angular frontend to display the analysis effectively to the operators.}
+    \resumeItemListEnd
+    \resumeListItems{Tools}{Angular, TypeScript, NgRx,  C\#, Python, GRPC}
+
+
+  \resumeSubHeadingListEnd
+
+
+% -----------PROJECTS-----------
+\section{Projects}
+   \resumeSubHeadingListStart
+   \resumeProjectHeading
+        {\textbf{ReFlick} $|$ \href{https://github.com/dj6207/BrickhackX}{https://github.com/dj6207/BrickhackX}}{}
+        \resumeItemListStart
+            \resumeItem {Developed a web application utilizing OpenAI to provide users with tailored recycling instructions based on uploaded images.}
+            \resumeItem {Utilized Flask to make OpenAI API requests for image classification and generation of item recycling instructions.}
+            \resumeItem {Deployed the web application through Vercel and hosted the backend on Heroku.}
+        \resumeItemListEnd
+    \resumeListItems{Tools}{React, OpenAI API, JavaScript, Flask, Python, Vercel, Heroku, Docker}
+    \resumeProjectHeading
+        {\textbf{Watch Dog} $|$ \href{https://github.com/dj6207/watchdog}{https://github.com/dj6207/watchdog}}{}
+        \resumeItemListStart
+            \resumeItem {Developed a desktop application leveraging Tauri, designed to monitor and analyze application usage.}
+            \resumeItem {Implemented the Rust backend, ensuring efficient performance and secure data handling for real time monitoring.}
+            \resumeItem {Utilized Recharts library to graph and visualize the collected data in real time.}
+        \resumeItemListEnd
+        \resumeListItems{Tools}{Rust, TypeScript, SQLite, Tauri, React}
+   \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages/Frameworks}{: Python, TypeScript, Rust, C, C\#, Java, HTML, CSS, SQL, React, Angular, Tauri} \\
+     \textbf{Technologies}{: Git, Docker, SQLite, PostgreSQL, Linux, Raspberry Pi, Alibaba Cloud, Google Cloud Platform} \\
+    }}
+ \end{itemize}
+
+ 
+%-----------ACTIVITIES SKILLS-----------
+\section{Activities}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Computer Science House} $|$ \textit{Alumni}}{Aug. 2021 - Sep. 2022}
+        \resumeItemListStart
+            \resumeItem {Participated in weekly house meetings and technical seminars to learn new skills and concepts.}
+            \resumeItem {Worked on various personal projects with guidance from technically experienced members.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+\end{document}
